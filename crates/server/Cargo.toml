@@ -1,0 +1,28 @@
+[package]
+name = "hypatia-server"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+tokio = { version = "1.33.0", features = ["rt", "rt-multi-thread", "macros"] }
+tide = "0.16.0"
+common.workspace = true
+parking_lot = "0.12.1"
+femme = "2.2.1"
+log = "0.4.20"
+tide-websockets = "0.4.0"
+futures-util = "0.3.28"
+serde_json = "1.0.107"
+mlua = { version = "0.9.1", features = ["async", "luau-jit", "send"] }
+anyhow = "1.0.75"
+surrealdb = "1.0.0"
+
+[dependencies.uuid]
+version = "1.5.0"
+features = [
+    "v4",                # Lets you generate random UUIDs
+    "fast-rng",          # Use a faster (but still sufficiently random) RNG
+    "macro-diagnostics", # Enable better diagnostics for compile-time UUIDs
+]

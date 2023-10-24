@@ -1,0 +1,11 @@
+[package]
+name = "hypatia-common"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+http-types = { version = "2.12.0", default-features = false }
+ordered-float = { version = "4.1.1", features = ["serde"] }
+serde = { version = "1.0.189", features = ["derive"] }
